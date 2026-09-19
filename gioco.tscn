@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://hpobbpnr57au"]
+
+[ext_resource type="Script" uid="uid://c2gefv4mj7qs4" path="res://gioco.gd" id="1_rbun6"]
+[ext_resource type="PackedScene" uid="uid://8f5mb5aj2rg7" path="res://rigid_body_2d.tscn" id="2_rbun6"]
+[ext_resource type="PackedScene" uid="uid://r2trrr4mrtnd" path="res://animated_sprite_2d.tscn" id="2_yfb0n"]
+[ext_resource type="PackedScene" uid="uid://cl2f4nggh26ra" path="res://il_flappo.tscn" id="3_yfb0n"]
+[ext_resource type="PackedScene" uid="uid://dvemd8fgt0qw" path="res://perso.tscn" id="6_cnw71"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeiif"]
+size = Vector2(1160.5, 18)
+
+[node name="Gioco" type="Node2D" unique_id=1280731749]
+script = ExtResource("1_rbun6")
+
+[node name="AnimatedSprite2D2" parent="." unique_id=1553255861 instance=ExtResource("2_yfb0n")]
+position = Vector2(361, 364)
+
+[node name="Il flappo" parent="." unique_id=1528494988 instance=ExtResource("3_yfb0n")]
+position = Vector2(199, 302)
+continuous_cd = 2
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1376710905]
+position = Vector2(128, 266)
+
+[node name="StaticBody2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=314509530]
+position = Vector2(445, -273)
+shape = SubResource("RectangleShape2D_yeiif")
+
+[node name="StaticBody2D2" type="CollisionShape2D" parent="StaticBody2D5" unique_id=2103500485]
+position = Vector2(-129, 23)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_yeiif")
+
+[node name="StaticBody2D3" type="CollisionShape2D" parent="StaticBody2D5" unique_id=2136770054]
+position = Vector2(456, 398)
+shape = SubResource("RectangleShape2D_yeiif")
+
+[node name="StaticBody2D4" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1013929209]
+position = Vector2(1035, -74)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_yeiif")
+
+[node name="Timer" type="Timer" parent="." unique_id=1321431882]
+wait_time = 5.0
+autostart = true
+
+[node name="RigidBody2D" parent="." unique_id=187554779 instance=ExtResource("2_rbun6")]
+position = Vector2(556, 356)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=902220856]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=377766752]
+offset_right = 237.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 32
+text = "Score: 0"
+
+[node name="Perso" parent="CanvasLayer" unique_id=553877320 instance=ExtResource("6_cnw71")]
+visible = false
+
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=1122940095]
+visible = false
+offset_left = 426.0
+offset_top = 404.0
+offset_right = 757.0
+offset_bottom = 535.0
+text = "Mi sento fortunato... voglio ricominciare!!!"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=691065177]
+position = Vector2(585, 334)
+ignore_rotation = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="colpito" from="RigidBody2D" to="." method="_on_rigid_body_2d_colpito"]
+[connection signal="colpito" from="RigidBody2D" to="Il flappo" method="_on_rigid_body_2d_colpito"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]

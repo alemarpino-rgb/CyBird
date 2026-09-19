@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://8f5mb5aj2rg7"]
+
+[ext_resource type="Script" uid="uid://bqkfte5bsxos3" path="res://rigid_body_2d.gd" id="1_2x7xp"]
+[ext_resource type="Script" uid="uid://w27w7xq311yq" path="res://col_1.gd" id="2_80516"]
+[ext_resource type="Texture2D" uid="uid://cojp0rixd1y4a" path="res://icon.svg" id="3_jqaj3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeiif"]
+size = Vector2(117, 511)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yeiif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jqaj3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RigidBody2D" type="StaticBody2D" unique_id=187554779]
+script = ExtResource("1_2x7xp")
+
+[node name="col1" type="CollisionShape2D" parent="." unique_id=1440137872]
+position = Vector2(1002, 103)
+shape = SubResource("RectangleShape2D_yeiif")
+script = ExtResource("2_80516")
+
+[node name="col2" type="AnimatedSprite2D" parent="." unique_id=1238754052]
+position = Vector2(1003, 106)
+scale = Vector2(1, 4.0546875)
+sprite_frames = SubResource("SpriteFrames_yeiif")
+
+[node name="col3" type="CollisionShape2D" parent="." unique_id=1903961169]
+position = Vector2(1019, 814)
+shape = SubResource("RectangleShape2D_yeiif")
+
+[node name="col4" type="AnimatedSprite2D" parent="." unique_id=902125885]
+position = Vector2(1017, 812.5)
+scale = Vector2(1, 4.0546875)
+sprite_frames = SubResource("SpriteFrames_yeiif")

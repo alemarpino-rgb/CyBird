@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://r2trrr4mrtnd"]
+
+[ext_resource type="Texture2D" uid="uid://ip00bvochwrb" path="res://metropoli-con-pixel-art-grattacieli-la-sera-una-grande-città-al-mattino-sfondo-vettoriale-273703737.webp" id="1_qujof"]
+[ext_resource type="Script" uid="uid://g3imvomb56s1" path="res://animated_sprite_2d.gd" id="2_348n5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yeiif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qujof")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1553255861]
+position = Vector2(-1, 5.000061)
+scale = Vector2(2.002948, 1.6169733)
+sprite_frames = SubResource("SpriteFrames_yeiif")
+script = ExtResource("2_348n5")

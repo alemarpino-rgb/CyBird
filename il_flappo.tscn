@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cl2f4nggh26ra"]
+
+[ext_resource type="Script" uid="uid://c3xycqs2u6f7i" path="res://il_flappo.gd" id="1_0x8wt"]
+[ext_resource type="Texture2D" uid="uid://cojp0rixd1y4a" path="res://icon.svg" id="1_844l7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yeiif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_844l7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeiif"]
+size = Vector2(75, 67)
+
+[node name="Il flappo" type="RigidBody2D" unique_id=1528494988]
+script = ExtResource("1_0x8wt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1188908646]
+position = Vector2(-2.9999695, 3.0000305)
+scale = Vector2(0.6484375, 0.5625)
+sprite_frames = SubResource("SpriteFrames_yeiif")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=442532129]
+position = Vector2(-2, 2)
+shape = SubResource("RectangleShape2D_yeiif")

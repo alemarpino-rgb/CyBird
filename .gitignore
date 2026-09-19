@@ -1,0 +1,6 @@
+# Escludi file Godot
+.godot/
+build/
+export/
+*.exe
+*.apk
