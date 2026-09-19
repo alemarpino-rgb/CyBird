@@ -1,26 +1,51 @@
 [gd_scene format=3 uid="uid://dvemd8fgt0qw"]
 
-[node name="Perso" type="Node2D" unique_id=553877320]
+[node name="Perso" type="Control" unique_id=1517393243]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1469011163]
-offset_right = 1205.0
-offset_bottom = 694.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1229214605]
 visible = false
-offset_right = 1157.0
-offset_bottom = 652.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Sei scarso! Hai perso! fai schifo!!!!!"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1009375034]
-offset_right = 1163.0
-offset_bottom = 656.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="." unique_id=393114462]
-offset_left = 112.0
-offset_top = 275.0
-offset_right = 1049.0
-offset_bottom = 770.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 57
 text = "Sei scarso! Hai perso! Fai schifo!!!!!"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -16,6 +16,6 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1553255861]
 position = Vector2(-1, 5.000061)
-scale = Vector2(2.002948, 1.6169733)
+scale = Vector2(2.002948, 2.1)
 sprite_frames = SubResource("SpriteFrames_yeiif")
 script = ExtResource("2_348n5")

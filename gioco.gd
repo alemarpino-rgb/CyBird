@@ -3,7 +3,6 @@ extends Node2D
 const OSTACOLO_SCENE = preload("res://rigid_body_2d.tscn")
 
 @onready var mio_timer: Timer = $Timer 
-const SPAWN_X = 1200.0 
 var punteggio=0
 
 func _on_timer_timeout() -> void:
@@ -15,7 +14,8 @@ func _on_timer_timeout() -> void:
 		
 	var altezza_casuale = randf_range(193.0, 523.0)
 	
-	nuovo_ostacolo.position = Vector2(SPAWN_X, altezza_casuale)
+	var bordo_destro = $Camera2D.get_screen_center_position().x + get_viewport_rect().size.x / 2
+	nuovo_ostacolo.position = Vector2(bordo_destro + 100, altezza_casuale)
 	
 	nuovo_ostacolo.colpito.connect(_on_rigid_body_2d_colpito)
 	

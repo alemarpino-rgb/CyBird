@@ -60,10 +60,18 @@ visible = false
 
 [node name="Button2" type="Button" parent="CanvasLayer" unique_id=1122940095]
 visible = false
-offset_left = 426.0
-offset_top = 404.0
-offset_right = 757.0
-offset_bottom = 535.0
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Mi sento fortunato... voglio ricominciare!!!"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=691065177]
